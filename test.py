@@ -1,6 +1,29 @@
 import keyboard
 import datetime
 import time
+import mouse
+
+print('#jasonisgod')
+dt_str = input('YYYY-MM-DD HH:MM:SS : ')
+try:
+    dt_target = datetime.datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S')
+except:
+    print('invalid input')
+    exit()
+print('running...')
+while True:
+    try:
+        dt_now = datetime.datetime.now()
+        if dt_now > dt_target:
+            mouse.click()
+            print(dt_now)
+            print(f'clicked !!!')
+            break
+    except KeyboardInterrupt:
+        break
+input('bye')
+
+'''
 
 def fill_form():
     time.sleep(3)
@@ -26,9 +49,6 @@ if __name__ == '__main__':
     fill_form()
     loop()
 
-
-
-'''
 import keyboard
 import time
 
