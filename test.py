@@ -4,13 +4,14 @@ import time
 import mouse
 
 print('#jasonisgod')
-dt_str = input('YYYY-MM-DD HH:MM:SS : ')
+dt_str = input('YYYY-MM-DD HH:MM:SS.SSS : ')
 try:
-    dt_target = datetime.datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S')
+    dt_target = datetime.datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S.%f')
 except:
     print('invalid input')
     exit()
-print('running...')
+print(dt_target)
+print('waiting...')
 while True:
     try:
         dt_now = datetime.datetime.now()
