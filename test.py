@@ -1,7 +1,7 @@
 import keyboard
 import datetime
 import time
-import mouse
+import pyautogui
 
 print('#jasonisgod')
 dt_str = input('YYYY-MM-DD HH:MM:SS.SSS : ')
@@ -16,7 +16,7 @@ while True:
     try:
         dt_now = datetime.datetime.now()
         if dt_now > dt_target:
-            mouse.click()
+            pyautogui.click()
             print(dt_now)
             print(f'clicked !!!')
             break
