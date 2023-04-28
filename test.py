@@ -3,14 +3,15 @@ import datetime
 import time
 import pyautogui
 
-print('#jasonisgod')
-dt_str = input('YYYY-MM-DD HH:MM:SS.SSS : ')
+dt_str_date = datetime.datetime.now().strftime('%Y-%m-%d')
+print(f'YYYY-MM-DD   : {dt_str_date}')
+dt_str_time = input('HH:MM:SS.SSS : ')
 try:
+    dt_str = f'{dt_str_date} {dt_str_time}'
     dt_target = datetime.datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S.%f')
 except:
     print('invalid input')
     exit()
-print(dt_target)
 print('waiting...')
 while True:
     try:
